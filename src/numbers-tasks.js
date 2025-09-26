@@ -265,6 +265,7 @@ function getFibonacciNumber(index) {
   if (index < 0) throw new Error('Index must be non-negative');
   if (index === 0) return 0;
   if (index === 1) return 1;
+
   let a = 0, b = 1;
   for (let i = 2; i <= index; i++) {
     [a, b] = [b, a + b];

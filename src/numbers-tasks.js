@@ -261,21 +261,8 @@ function getCube(num) {
  *   3  => 2
  *   10 => 55
  */
-function getFibonacciNumber(index) {
-  if (typeof index !== 'number' || !Number.isInteger(index) || index < 0) {
-    throw new Error('Index must be a non-negative integer');
-  }
-  if (index === 0) return 0;
-  if (index === 1) return 1;
-
-  let a = 0;
-  let b = 1;
-  for (let i = 2; i <= index; i++) {
-    const next = a + b;
-    a = b;
-    b = next;
-  }
-  return b;
+function getFibonacciNumber(/* index */) {
+  throw new Error('Not implemented');
 }
 
 /**
@@ -289,8 +276,8 @@ function getFibonacciNumber(index) {
  *   10 => 55 // (1+2+3+...+10)
  *   1  => 1
  */
-function getSumToN(/* n */) {
-  throw new Error('Not implemented');
+function getSumToN(n) {
+  return (n * (n + 1)) / 2;
 }
 
 /**

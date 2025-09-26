@@ -262,13 +262,14 @@ function getCube(num) {
  *   10 => 55
  */
 function getFibonacciNumber(index) {
-  if (index < 0) throw new Error('Index must be non-negative');
-  
+  if (index < 0) {
+    throw new Error('Index cannot be negative');
+  }
+  if (index === 0) return 0;
+  if (index === 1) return 1;
+
   let a = 0;
   let b = 1;
-  if (index === 0) return a;
-  if (index === 1) return b;
-
   for (let i = 2; i <= index; i++) {
     const next = a + b;
     a = b;

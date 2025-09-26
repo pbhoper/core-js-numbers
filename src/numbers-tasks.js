@@ -606,7 +606,7 @@ function getRandomInteger(/* min, max */) {
  * 3, 4 => 5
  */
 function getHypotenuse(a, b) {
-  return Math.sqrt(a * a + b * b);
+  return Math.sqrt(Math.pow(a, 2) + Math.pow(b, 2));
 }
 
 /**

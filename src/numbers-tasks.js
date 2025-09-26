@@ -401,7 +401,7 @@ function toPrecision(number, precision) {
  * Number(-5)    => -5
  */
 function getNumberValue(number) {
-  return typeof number === 'object' && number instanceof Number ? number.valueOf() : number;
+  return Number.prototype.valueOf.call(number);
 }
 
 /**

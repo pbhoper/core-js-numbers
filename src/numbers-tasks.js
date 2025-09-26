@@ -262,8 +262,8 @@ function getCube(num) {
  *   10 => 55
  */
 function getFibonacciNumber(index) {
-  if (index < 0) {
-    throw new Error('Index cannot be negative');
+  if (typeof index !== 'number' || !Number.isInteger(index) || index < 0) {
+    throw new Error('Index must be a non-negative integer');
   }
   if (index === 0) return 0;
   if (index === 1) return 1;

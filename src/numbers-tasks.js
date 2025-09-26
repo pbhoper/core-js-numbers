@@ -448,9 +448,8 @@ function isInteger(number) {
  * '4.567abcdefgh' => 4.567
  * 'abcdefgh'      => NaN
  */
-function getFloatOnString(str) {
-  const parsed = parseFloat(str);
-  return isNaN(parsed) ? NaN : parsed;
+function getFloatOnString(/* str */) {
+  throw new Error('Not implemented');
 }
 
 /**

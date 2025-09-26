@@ -310,7 +310,11 @@ function getSumOfDigits(num) {
  *   15  => false
  */
 function isPowerOfTwo(num) {
-  return num > 0 && (num & (num - 1)) === 0;
+  if (typeof num !== 'number' || !Number.isFinite(num) || !Number.isInteger(num)) {
+    return false;
+  }
+  if (num <= 0) return false;
+  return (num & (num - 1)) === 0;
 }
 
 /**

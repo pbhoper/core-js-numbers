@@ -591,11 +591,8 @@ function getMaxNumber(firstNumber, secondNumber) {
  * -5, 0 => -5 | -4 | -3 | -2 | -1 | 0
  * -1, 1 => -1 | 0 | 1
  */
-function getRandomInteger(min, max) {
-  min = Math.ceil(min);
-  max = Math.floor(max);
-  const random = Math.random() * (max - min) + min;
-  return Math.round(random);
+function getRandomInteger(/* min, max */) {
+  throw new Error('Not implemented');
 }
 
 /**
@@ -608,8 +605,8 @@ function getRandomInteger(min, max) {
  * @example:
  * 3, 4 => 5
  */
-function getHypotenuse(/* a, b */) {
-  throw new Error('Not implemented');
+function getHypotenuse(a, b) {
+  return Math.sqrt(a * a + b * b);
 }
 
 /**

@@ -605,9 +605,7 @@ function getRandomInteger(/* min, max */) {
  * @example:
  * 3, 4 => 5
  */
-function getHypotenuse(a, b) {
-  return Math.sqrt(Math.pow(a, 2) + Math.pow(b, 2));
-}
+const getHypotenuse = (a, b) => Math.sqrt(a ** 2 + b ** 2);
 
 /**
  * Returns count of odd numbers from zero to the resulting number.

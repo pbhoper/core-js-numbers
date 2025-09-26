@@ -400,8 +400,8 @@ function toPrecision(number, precision) {
  * new Number(5) => 5
  * Number(-5)    => -5
  */
-function getNumberValue(/* number */) {
-  throw new Error('Not implemented');
+function getNumberValue(number) {
+  return typeof number === 'object' && number instanceof Number ? number.valueOf() : number;
 }
 
 /**
